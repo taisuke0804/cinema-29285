@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.header{
+  background-color: red;
+  width: 100vw;
+}
+
+.page_title{
+  height: 80px;
+  width: 400px;
+  background-color: blue;
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo_title{
+  font-size: 45px;
+  text-align: center;
+  background-color: yellow;
+  margin: 10px 0 10px 0;
+}
