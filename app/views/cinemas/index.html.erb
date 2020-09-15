@@ -1,14 +1,26 @@
-aaa
 <header class="header">
   <div class="page_title">
     <div class="logo_title">
       <%= link_to "cinema review", root_path, class:"aaa" %>
     </div>
   </div>
-  <ul class="user_info">
-    <li>
-     <%= link_to "マイページ", "#", class:"user_nickname" %>
-     <%= link_to "ログアウト", "#", method: :delete, class:"logout" %>
-    </li>
-  </ul>
+  <% if user_signed_in? %>
+    <ul class="user_info">
+      <li>
+        <%= link_to current_user.nickname, "#", class:"user_nickname" %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"logout" %>
+      </li>
+    </ul>
+  <% else %>
+    <ul class="user_info">
+      <li>
+        <%= link_to "新規登録", new_user_registration_path, class:"user_nickname" %>
+        <%= link_to "ログイン", new_user_session_path, class:"logout" %>
+      </li>
+    </ul>
+  <% end %>
+
+  <div class="new_review">
+    <%= link_to "レビュー投稿", new_cinema_path, class:"review_logo" %>
+  </div>
 </header>

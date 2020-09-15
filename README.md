@@ -32,7 +32,7 @@ Things you may want to cover:
 | email    | string | null: false |
 | password | string | null: false |
 | birthday | date   | null: false |
-| name     | string | null: false |
+| full_name | string | null: false |
 | furigana | string | null: false |
 | sex      | integer| null: false |
 

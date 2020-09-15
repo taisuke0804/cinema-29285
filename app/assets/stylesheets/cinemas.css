@@ -14,7 +14,6 @@
   width: 400px;
   display: flex;
   justify-content: space-around;
-  background-color:blue;
 }
 
 .logo_title{
@@ -40,5 +39,20 @@
 }
 
 .logout{
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+.new_review{
+  background-color: yellow;
+  width: 130px;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review_logo{
+  font-size: 20px;
   text-decoration: none;
 }
