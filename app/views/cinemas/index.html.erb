@@ -2,7 +2,13 @@ aaa
 <header class="header">
   <div class="page_title">
     <div class="logo_title">
-      cinema review
+      <%= link_to "cinema review", root_path, class:"aaa" %>
     </div>
   </div>
+  <ul class="user_info">
+    <li>
+     <%= link_to "マイページ", "#", class:"user_nickname" %>
+     <%= link_to "ログアウト", "#", method: :delete, class:"logout" %>
+    </li>
+  </ul>
 </header>

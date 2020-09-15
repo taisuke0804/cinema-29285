@@ -4,21 +4,41 @@
 
 
 .header{
-  background-color: red;
+  background-color: black;
   width: 100vw;
+  display: flex;
 }
 
 .page_title{
   height: 80px;
   width: 400px;
-  background-color: blue;
   display: flex;
   justify-content: space-around;
+  background-color:blue;
 }
 
 .logo_title{
   font-size: 45px;
-  text-align: center;
-  background-color: yellow;
   margin: 10px 0 10px 0;
+}
+
+.aaa{
+  color: red;
+  text-decoration: none;
+}
+
+.user_info{
+  background-color: yellow;
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.user_nickname{
+  text-decoration: none;
+}
+
+.logout{
+  text-decoration: none;
 }
