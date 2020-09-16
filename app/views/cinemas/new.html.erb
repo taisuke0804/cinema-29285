@@ -16,17 +16,17 @@
   </div>
 
   <div>
-    <%= f.label :spoiler, "ネタバレ" %><br />
-    <%= f.select :spoiler, {'あり': 1, 'なし': 2}, { include_blank: '選択してください'} %>
+    <%= f.label :spoiler_id, "ネタバレ" %><br />
+    <%= f.collection_select(:spoiler_id, Spoiler.all, :id, :name, {}, {}) %>
   </div>
 
   <div>
-    <%= f.label :genre, "ジャンル" %><br />
+    <%= f.label :genre_id, "ジャンル" %><br />
     <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {}) %>
   </div>
 
   <div>
-    <%= f.label :appreciation, "鑑賞方法" %><br />
+    <%= f.label :appreciation_id, "鑑賞方法" %><br />
     <%= f.collection_select(:appreciation_id, Appreciation.all, :id, :name, {}, {}) %>
   </div>
 

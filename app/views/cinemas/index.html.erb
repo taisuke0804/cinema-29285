@@ -24,3 +24,30 @@
     <%= link_to "レビュー投稿", new_cinema_path, class:"review_logo" %>
   </div>
 </header>
+
+<% @cinemas.each do |cinema| %>
+  <div>
+    <%= "題名  " %>
+    <%= cinema.title %>
+  </div>
+
+  <div>
+    <%= "点数  " %>
+    <%= cinema.score %>
+  </div>
+
+  <div>
+    <%= "ネタバレ  " %>
+    <%= cinema.spoiler.name %>
+  </div>
+
+  <div>
+    <%= "ジャンル  " %>
+    <%= cinema.genre.name %>
+  </div>
+
+  <div>
+    <%= "鑑賞方法  " %>
+    <%= cinema.appreciation.name %>
+  </div>
+<% end %>

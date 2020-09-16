@@ -15,10 +15,10 @@ ActiveRecord::Schema.define(version: 2020_09_15_103336) do
   create_table "cinemas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
     t.integer "score", null: false
-    t.integer "spoiler", null: false
-    t.integer "genre", null: false
+    t.integer "spoiler_id", null: false
+    t.integer "genre_id", null: false
     t.text "review", null: false
-    t.integer "appreciation", null: false
+    t.integer "appreciation_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
