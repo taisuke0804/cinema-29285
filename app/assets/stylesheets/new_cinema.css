@@ -2,4 +2,60 @@
   background-color: yellow;
   font-size: 60px;
   text-align: center;
+  margin-top: 30px;
+}
+
+.display{
+  margin: 0 0 0 20px;
+  font-size: 25px;
+}
+
+.input_title{
+  font-size: 30px;
+  height: 30px;
+  width: 70%;
+  border: 1px solid blue;
+  margin: 0 0 30px 20px;
+}
+
+.input_review{
+  height: 300px;
+  width: 80%;
+  border: 1px solid blue;
+  margin: 0 0 30px 20px;
+}
+
+.input_score{
+  margin: 0 0 30px 20px;
+  height: 60px;
+  width: 110px;
+  font-size: 50px;
+}
+
+.input_spoiler{
+  margin: 0 0 30px 20px;
+  height: 30px;
+  width: 80px;
+}
+
+.input_genre{
+  margin: 0 0 30px 20px;
+  height: 30px;
+}
+
+.input_appreciation{
+  margin: 0 0 30px 20px;
+  height: 30px;
+  width: 180px;
+}
+
+.btn_submit{
+  margin-bottom: 100px;
+}
+
+.new_submit{
+  background-color: red;
+  height: 50px;
+  width: 150px;
+  margin-left: 25px;
 }

@@ -5,4 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :cinemas
+
+  with_options presence: true do 
+    validates :nickname, length: { maximum: 20 }
+    validates :birthday
+    validates :full_name
+    validates :furigana
+    validates :sex
+  end
 end

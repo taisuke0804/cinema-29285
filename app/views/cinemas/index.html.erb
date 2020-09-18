@@ -1,53 +1,47 @@
-<header class="header">
-  <div class="page_title">
-    <div class="logo_title">
-      <%= link_to "cinema review", root_path, class:"aaa" %>
-    </div>
-  </div>
-  <% if user_signed_in? %>
-    <ul class="user_info">
-      <li>
-        <%= link_to current_user.nickname, "#", class:"user_nickname" %>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"logout" %>
-      </li>
-    </ul>
-  <% else %>
-    <ul class="user_info">
-      <li>
-        <%= link_to "新規登録", new_user_registration_path, class:"user_nickname" %>
-        <%= link_to "ログイン", new_user_session_path, class:"logout" %>
-      </li>
-    </ul>
-  <% end %>
 
-  <div class="new_review">
-    <%= link_to "レビュー投稿", new_cinema_path, class:"review_logo" %>
-  </div>
-</header>
+<%= render 'shared/header' %>
+
+<div>
+  <%= link_to image_tag("eigakan.png", class:"google-btn"), "#" %>
+</div>
 
 <% @cinemas.each do |cinema| %>
-  <div>
-    <%= "題名  " %>
-    <%= cinema.title %>
-  </div>
+  <div class="cinema_item">
+    <div class="cinema_title">
+      <div class="list">題名  </div>
+      <div class="list2"><%= "『#{cinema.title}』" %></div>
+    </div>
 
-  <div>
-    <%= "点数  " %>
-    <%= cinema.score %>
-  </div>
+    <div class="cinema_title">
+      <div class="list">点数  </div>
+      <div class="list2"><%= "『#{cinema.score}点』" %></div>
+    </div>
 
-  <div>
-    <%= "ネタバレ  " %>
-    <%= cinema.spoiler.name %>
-  </div>
+    <div class="cinema_title">
+      <div class="list">ネタバレ  </div>
+      <div class="list2"><%= "#{cinema.spoiler.name}" %></div>
+    </div>
 
-  <div>
-    <%= "ジャンル  " %>
-    <%= cinema.genre.name %>
-  </div>
+    <div class="cinema_title">
+      <div class="list">ジャンル  </div>
+      <div class="list2"><%= "#{cinema.genre.name}" %></div>
+    </div>
 
-  <div>
-    <%= "鑑賞方法  " %>
-    <%= cinema.appreciation.name %>
+    <div class="cinema_title">
+      <div class="list">鑑賞方法  </div>
+      <div class="list2"><%= "#{cinema.appreciation.name}" %></div>
+    </div>
+
+    <div class="cinema_title">
+      <div class="list">投稿者  </div>
+      <div class="list2"><%= "#{cinema.user.nickname}" %></div>
+    </div>
+
+    <div class="cinema_review1">
+      <div class="list">レビュー本文  </div>
+      <div class="list3">
+        <div class="list4"><%= "#{cinema.review}" %></div>
+      </div>
+    </div>
   </div>
 <% end %>

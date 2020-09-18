@@ -1,0 +1,35 @@
+.cinema_item{
+  border: 10px inset blue;
+  width: 90%;
+  margin: 20px auto;
+  /* height: 300px; */
+}
+
+.cinema_title{
+  /* border: solid 1px red; */
+  border-bottom: solid 1px blue;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.list{
+  font-size: 25px;
+  margin: 0 0 0 10px;
+  color: aqua;
+}
+
+.list2{
+  font-size: 30px;
+  margin: 0 0 0 30px;
+}
+
+.cinema_review1{
+  height: 250px;
+}
+
+.list3{
+  font-size: 18px;
+  margin: 0 30px 0 30px;
+  border: solid 1px red;
+}
