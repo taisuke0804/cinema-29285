@@ -20,7 +20,7 @@ class CinemasController < ApplicationController
 
   private
   def cinema_params
-    params.require(:cinema).permit(:title, :review, :score, :spoiler_id, :genre_id, :appreciation_id).merge(user_id: current_user.id)
+    params.require(:cinema).permit(:title, :review, :score, :spoiler_id, :genre_id, :appreciation_id, :watch_time_id).merge(user_id: current_user.id)
   end
 
   def move_to_index

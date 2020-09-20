@@ -36,6 +36,11 @@
     <%= f.collection_select(:appreciation_id, Appreciation.all, :id, :name, {}, {class:"input_appreciation"}) %>
   </div>
 
+  <div>
+    <%= f.label :watch_time_id, "鑑賞回数", class:"display" %><br />
+    <%= f.collection_select(:watch_time_id, WatchTime.all, :id, :name, {}, {class:"input_watch_time"}) %>
+  </div>
+
   <div class="btn_submit">
     <%= f.submit "送信", class:"new_submit" %>
   </div>

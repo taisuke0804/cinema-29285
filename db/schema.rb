@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_15_103336) do
+ActiveRecord::Schema.define(version: 2020_09_20_132441) do
 
   create_table "cinemas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
@@ -19,10 +19,37 @@ ActiveRecord::Schema.define(version: 2020_09_15_103336) do
     t.integer "genre_id", null: false
     t.text "review", null: false
     t.integer "appreciation_id", null: false
+    t.integer "watch_time_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_cinemas_on_user_id"
+  end
+
+  create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "movie_1"
+    t.string "movie_2"
+    t.string "movie_3"
+    t.string "movie_4"
+    t.string "movie_5"
+    t.string "movie_6"
+    t.string "movie_7"
+    t.string "movie_8"
+    t.string "movie_9"
+    t.string "movie_10"
+    t.string "actor_1"
+    t.string "actor_2"
+    t.string "actor_3"
+    t.string "actor_4"
+    t.string "actor_5"
+    t.string "director_1"
+    t.string "director_2"
+    t.string "director_3"
+    t.text "profile"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -43,4 +70,5 @@ ActiveRecord::Schema.define(version: 2020_09_15_103336) do
   end
 
   add_foreign_key "cinemas", "users"
+  add_foreign_key "favorites", "users"
 end

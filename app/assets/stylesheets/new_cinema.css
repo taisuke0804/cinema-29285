@@ -49,6 +49,12 @@
   width: 180px;
 }
 
+.input_watch_time{
+  margin: 0 0 30px 20px;
+  height: 30px;
+  width: 150px;
+}
+
 .btn_submit{
   margin-bottom: 100px;
 }

@@ -52,6 +52,7 @@ Things you may want to cover:
 | genre     | integer | null: false |
 | review    | text    | null: false |
 | appreciation | integer | null: false |
+| watch_time | integer | null: false |
 | user         | references | null: false, foreign_key: true |
 
 ### Association
