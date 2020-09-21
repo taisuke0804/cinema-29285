@@ -11,4 +11,107 @@
     <%= f.text_area :profile, class:"input_profile" %>
   </div>
 
+  <div>
+    <%= f.label :movie_1, "好きな映画BEST10", class:"display" %><br />
+    <div class="label">
+      <div class="label_name" >1位</div>
+      <%= f.text_area :movie_1, class:"input_movie" %>
+    </div>
+
+    <div class="label">
+      <div class="label_name" >2位</div>
+      <%= f.text_area :movie_2, class:"input_movie" %>
+    </div>
+
+    <div class="label">
+      <div class="label_name" >3位</div>
+      <%= f.text_area :movie_3, class:"input_movie" %>
+    </div>
+
+    <div class="label">
+      <div class="label_name" >4位</div>
+      <%= f.text_area :movie_4, class:"input_movie" %>
+    </div>
+
+    <div class="label">
+      <div class="label_name" >5位</div>
+      <%= f.text_area :movie_5, class:"input_movie" %>
+    </div>
+
+    <div class="label">
+      <div class="label_name" >6位</div>
+      <%= f.text_area :movie_6, class:"input_movie" %>
+    </div>
+
+    <div class="label">
+      <div class="label_name" >7位</div>
+      <%= f.text_area :movie_7, class:"input_movie" %>
+    </div>
+
+    <div class="label">
+      <div class="label_name" >8位</div>
+      <%= f.text_area :movie_8, class:"input_movie" %>
+    </div>
+
+    <div class="label">
+      <div class="label_name" >9位</div>
+      <%= f.text_area :movie_9, class:"input_movie" %>
+    </div>
+
+    <div class="label">
+      <div class="label_name" >10位</div>
+      <%= f.text_area :movie_10, class:"input_movie" %>
+    </div>
+  </div>
+
+  <div>
+    <%= f.label :actor_1, "好きな俳優BEST5", class:"display" %><br />
+    <div class="label">
+      <div class="label_name" >1位</div>
+      <%= f.text_area :actor_1, class:"input_movie" %>
+    </div>
+
+    <div class="label">
+      <div class="label_name" >2位</div>
+      <%= f.text_area :actor_2, class:"input_movie" %>
+    </div>
+
+    <div class="label">
+      <div class="label_name" >3位</div>
+      <%= f.text_area :actor_3, class:"input_movie" %>
+    </div>
+
+    <div class="label">
+      <div class="label_name" >4位</div>
+      <%= f.text_area :actor_4, class:"input_movie" %>
+    </div>
+
+    <div class="label">
+      <div class="label_name" >5位</div>
+      <%= f.text_area :actor_5, class:"input_movie" %>
+    </div>
+  </div>
+
+  <div>
+    <%= f.label :director_1, "好きな監督BEST3", class:"display" %><br />
+    <div class="label">
+      <div class="label_name" >1位</div>
+      <%= f.text_area :director_1, class:"input_movie" %>
+    </div>
+
+    <div class="label">
+      <div class="label_name" >2位</div>
+      <%= f.text_area :director_2, class:"input_movie" %>
+    </div>
+
+    <div class="label">
+      <div class="label_name" >3位</div>
+      <%= f.text_area :director_3, class:"input_movie" %>
+    </div>
+  </div>
+
+  <div class="btn_submit">
+    <%= f.submit "送信", class:"new_submit" %>
+  </div>
+
 <% end %>
