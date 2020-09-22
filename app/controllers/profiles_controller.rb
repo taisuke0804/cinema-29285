@@ -2,7 +2,10 @@ class ProfilesController < ApplicationController
 
   def index
     @favorite = Favorite.find_by(user_id: current_user.id)
-    #@favorite = favorite(current_user.id)
+    #@favorite = Favorite.find(params[:id])
+    unless @favorite
+      redirect_to new_profile_path
+    end
   end
 
   def new
@@ -21,6 +24,21 @@ class ProfilesController < ApplicationController
   def show
     #@favorite = Favorite.find(params[:id])
   end
+
+  def edit
+    @favorite = Favorite.find_by(user_id: current_user.id)
+  end
+
+  def update
+    @favorite = Favorite.find_by(user_id: current_user.id)
+    @favorite.update(favorite_params)
+    if @favorite.save
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
 
   private
   def favorite_params
