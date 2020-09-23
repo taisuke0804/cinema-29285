@@ -3,7 +3,7 @@ class CinemasController < ApplicationController
 
   def index
     @cinemas = Cinema.all.order("created_at DESC")
-    #@user = Favorite.where(user_id: current_user.id)
+    #@favorite = Favorite.find_by(user_id: current_user.id)
   end
 
   def new

@@ -9,3 +9,33 @@
   font-size: 70px;
   margin: 20px 0;
 }
+
+.index_profile{
+  height: 500px;
+  margin: 0 20px 30px 20px;
+  border: 10px inset blue;
+  font-size: 25px;
+}
+
+.movie_table{
+  background-color: skyblue;
+  margin: 20px 0 20px 20px;
+  width: 90%;
+}
+
+.table_left{
+  border: solid 1px black;
+  height: 50px;
+  width: 70px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.table_right{
+  border: solid 1px black;
+  padding: 0 0 0 20px;
+  font-weight: 500;
+  font-size: 20px;
+  color: red;
+}

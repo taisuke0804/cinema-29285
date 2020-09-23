@@ -1,8 +1,13 @@
 class ProfilesController < ApplicationController
+  before_action :move_to_index, except: [:index]
 
   def index
-    @favorite = Favorite.find_by(user_id: current_user.id)
-    #@favorite = Favorite.find(params[:id])
+    # @favorite = Favorite.find_by(user_id: current_user.id)
+    # unless @favorite
+    #   redirect_to new_profile_path
+    # end
+    @user = User.find(params[:id])
+    @favorite = @user.favorite
     unless @favorite
       redirect_to new_profile_path
     end
@@ -22,7 +27,11 @@ class ProfilesController < ApplicationController
   end
 
   def show
-    #@favorite = Favorite.find(params[:id])
+    @user = User.find(params[:id])
+    @favorite = @user.favorite
+    unless @favorite
+      redirect_to new_profile_path
+    end
   end
 
   def edit
@@ -45,6 +54,12 @@ class ProfilesController < ApplicationController
     params.require(:favorite).permit(
       :movie_1, :movie_2, :movie_3, :movie_4, :movie_5, :movie_6, :movie_7, :movie_8, :movie_9, :movie_10, :actor_1, :actor_2, :actor_3, :actor_4, :actor_5, :director_1, :director_2, :director_3, :profile
     ).merge(user_id: current_user.id)
+  end
+
+  def move_to_index
+    unless user_signed_in? 
+      redirect_to action: :index
+    end
   end
 
 end

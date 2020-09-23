@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :cinemas
+  has_one :favorite
 
   with_options presence: true do 
     validates :nickname, length: { maximum: 20 }
