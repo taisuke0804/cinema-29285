@@ -40,7 +40,9 @@
 
     <div class="cinema_title">
       <div class="list">投稿者  </div>
-      <div class="list2"><%= link_to "#{cinema.user.nickname}", "/users/#{cinema.user_id}" %></div>
+      <div class="list2">
+        <%= link_to "#{cinema.user.nickname}", "/users/#{cinema.user_id}" %>
+      </div>
     </div>
 
     <div class="cinema_review1">

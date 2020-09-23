@@ -26,8 +26,8 @@
 
   <div class="profile_review">
     <% if user_signed_in? %>
-      <%#= link_to "自己紹介ページ", profiles_path, class:"review_logo" %>
-      <%= link_to "自己紹介ページ", profile_path(current_user.id), class:"review_logo" %>
+      <%= link_to "自己紹介ページ", profiles_path, class:"review_logo" %>
+      <%#= link_to "自己紹介ページ", profile_path(current_user.id), class:"review_logo" %>
     <% else %>
       <%= link_to "自己紹介ページ", root_path, class:"review_logo" %>
     <% end %>

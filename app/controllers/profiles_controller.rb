@@ -2,15 +2,15 @@ class ProfilesController < ApplicationController
   before_action :move_to_index, except: [:index]
 
   def index
-    # @favorite = Favorite.find_by(user_id: current_user.id)
-    # unless @favorite
-    #   redirect_to new_profile_path
-    # end
-    @user = User.find(params[:id])
-    @favorite = @user.favorite
+    @favorite = Favorite.find_by(user_id: current_user.id)
     unless @favorite
       redirect_to new_profile_path
     end
+    # @user = User.find(params[:id])
+    # @favorite = @user.favorite
+    # unless @favorite
+    #   redirect_to new_profile_path
+    # end
   end
 
   def new
