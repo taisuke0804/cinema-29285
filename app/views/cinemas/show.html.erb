@@ -48,7 +48,9 @@
   </div>
 </div>
 
-<div class="edit_destroy">
-  <%= link_to "編集", edit_cinema_path(@cinema.id), class:"cinema_edit" %>
-  <%= link_to "削除", cinema_path(@cinema.id), method: :delete, class:"cinema_edit" %>
-</div>
+<% if user_signed_in? && @cinema.user_id == current_user.id %>
+  <div class="edit_destroy">
+    <%= link_to "編集", edit_cinema_path(@cinema.id), class:"cinema_edit" %>
+    <%= link_to "削除", cinema_path(@cinema.id), method: :delete, class:"cinema_edit" %>
+  </div>
+<% end %>
