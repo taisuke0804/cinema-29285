@@ -9,8 +9,8 @@
 
 <% @cinemas.each do |cinema| %>
   <div class="cinema_item">
-    <div class="cinema_title">
-      <div class="list">題名  </div>
+    <div class="title_height">
+      <div class="list_title">題名  </div>
       <div class="list2">
         <%= link_to "『#{cinema.title}』", cinema_path(cinema.id), class:"list_border" %>
       </div>
