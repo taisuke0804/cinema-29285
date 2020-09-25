@@ -1,0 +1,48 @@
+<%= render 'shared/header' %>
+
+<h2 class="cinema_info">作品情報入力</h2>
+<%= form_with model: @cinema, url: cinema_path(@cinema.id), local: true do |f| %>
+
+  <%= render 'shared/error_messages', model: f.object %>
+
+  <div>
+    <%= f.label :title, "作品名", class:"display" %><br />
+    <%= f.text_area :title, class:"input_title" %>
+  </div>
+
+  <div>
+    <%= f.label :review, "レビュー", class:"display" %><br />
+    <%= f.text_area :review, class:"input_review" %>
+  </div>
+
+  <div>
+    <%= f.label :score, "点数", class:"display" %>
+    <%= "0~100で入力してください" %><br />
+    <%= f.text_field :score, class:"input_score" %>
+  </div>
+
+  <div>
+    <%= f.label :spoiler_id, "ネタバレ", class:"display" %><br />
+    <%= f.collection_select(:spoiler_id, Spoiler.all, :id, :name, {}, {class:"input_spoiler"}) %>
+  </div>
+
+  <div>
+    <%= f.label :genre_id, "ジャンル", class:"display" %><br />
+    <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"input_genre"}) %>
+  </div>
+
+  <div>
+    <%= f.label :appreciation_id, "鑑賞方法", class:"display" %><br />
+    <%= f.collection_select(:appreciation_id, Appreciation.all, :id, :name, {}, {class:"input_appreciation"}) %>
+  </div>
+
+  <div>
+    <%= f.label :watch_time_id, "鑑賞回数", class:"display" %><br />
+    <%= f.collection_select(:watch_time_id, WatchTime.all, :id, :name, {}, {class:"input_watch_time"}) %>
+  </div>
+
+  <div class="btn_submit">
+    <%= f.submit "送信", class:"new_submit" %>
+  </div>
+
+<% end %>

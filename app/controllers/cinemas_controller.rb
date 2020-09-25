@@ -23,6 +23,26 @@ class CinemasController < ApplicationController
     @cinema = Cinema.find(params[:id])
   end
 
+  def edit
+    @cinema = Cinema.find(params[:id])
+  end
+
+  def update
+    @cinema = Cinema.find(params[:id])
+    @cinema.update(cinema_params)
+    if @cinema.save
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    cinema = Cinema.find(params[:id])
+    cinema.destroy
+    redirect_to root_path
+  end
+
   private
   def cinema_params
     params.require(:cinema).permit(:title, :review, :score, :spoiler_id, :genre_id, :appreciation_id, :watch_time_id).merge(user_id: current_user.id)

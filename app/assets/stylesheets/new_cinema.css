@@ -12,7 +12,7 @@
 
 .input_title{
   font-size: 30px;
-  height: 30px;
+  height: auto;
   width: 70%;
   border: 1px solid blue;
   margin: 0 0 30px 20px;
