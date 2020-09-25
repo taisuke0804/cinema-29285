@@ -19,6 +19,10 @@ class CinemasController < ApplicationController
     end
   end
 
+  def show
+    @cinema = Cinema.find(params[:id])
+  end
+
   private
   def cinema_params
     params.require(:cinema).permit(:title, :review, :score, :spoiler_id, :genre_id, :appreciation_id, :watch_time_id).merge(user_id: current_user.id)

@@ -1,0 +1,49 @@
+<%= render 'shared/header' %>
+
+
+<div class="cinema_item">
+  <div class="cinema_title">
+    <div class="list">題名  </div>
+    <div class="list2">
+      <%= link_to "『#{@cinema.title}』", cinema_path(@cinema.id), class:"list_border" %>
+    </div>
+  </div>
+
+  <div class="cinema_title">
+    <div class="list">点数  </div>
+    <div class="list2"><%= "『#{@cinema.score}点』" %></div>
+  </div>
+
+  <div class="cinema_title">
+    <div class="list">ネタバレ  </div>
+    <div class="list2"><%= "#{@cinema.spoiler.name}" %></div>
+  </div>
+
+  <div class="cinema_title">
+    <div class="list">ジャンル  </div>
+    <div class="list2"><%= "#{@cinema.genre.name}" %></div>
+  </div>
+
+  <div class="cinema_title">
+    <div class="list">鑑賞方法  </div>
+    <div class="list2"><%= "#{@cinema.appreciation.name}" %></div>
+  </div>
+
+  <div class="cinema_title">
+    <div class="list">鑑賞回数  </div>
+    <div class="list2"><%= "#{@cinema.watch_time.name}" %></div>
+  </div>
+
+  <div class="cinema_title">
+    <div class="list">投稿者  </div>
+    <div class="list2">
+      <%= link_to "#{@cinema.user.nickname}", "/users/#{@cinema.user_id}", class:"list_border" %>
+    </div>
+  </div>
+  <div class="cinema_review1">
+    <div class="list">レビュー本文  </div>
+    <div class="list3">
+      <div class="list4"><%= "#{@cinema.review}" %></div>
+    </div>
+  </div>
+</div>

@@ -5,12 +5,15 @@
   <%= link_to image_tag("eigakan.png", class:"google-btn"), "#" %>
 </div>
 
+<div>レビュー本文は題名のリンクをクリックして見れます</div>
 
 <% @cinemas.each do |cinema| %>
   <div class="cinema_item">
     <div class="cinema_title">
       <div class="list">題名  </div>
-      <div class="list2"><%= "『#{cinema.title}』" %></div>
+      <div class="list2">
+        <%= link_to "『#{cinema.title}』", cinema_path(cinema.id), class:"list_border" %>
+      </div>
     </div>
 
     <div class="cinema_title">
@@ -41,14 +44,7 @@
     <div class="cinema_title">
       <div class="list">投稿者  </div>
       <div class="list2">
-        <%= link_to "#{cinema.user.nickname}", "/users/#{cinema.user_id}" %>
-      </div>
-    </div>
-
-    <div class="cinema_review1">
-      <div class="list">レビュー本文  </div>
-      <div class="list3">
-        <div class="list4"><%= "#{cinema.review}" %></div>
+        <%= link_to "#{cinema.user.nickname}", "/users/#{cinema.user_id}", class:"list_border" %>
       </div>
     </div>
   </div>

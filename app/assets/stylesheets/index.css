@@ -24,8 +24,12 @@
   margin: 0 0 0 30px;
 }
 
+.list_border{
+  text-decoration: none;
+}
+
 .cinema_review1{
-  height: 250px;
+  height: 700px;
 }
 
 .list3{
