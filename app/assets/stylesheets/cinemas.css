@@ -47,7 +47,8 @@
 
 .new_review{
   background-color: yellow;
-  width: 130px;
+  /* width: 130px; */
+  width: 200px;
   margin-left: 30px;
   display: flex;
   align-items: center;
@@ -61,7 +62,8 @@
 
 .profile_review{
   background-color: yellow;
-  width: 150px;
+  /* width: 150px; */
+  width: 200px;
   margin-left: 30px;
   display: flex;
   align-items: center;
@@ -71,4 +73,28 @@
 .google-btn{
   height: 300px;
   width: 100%;
+}
+
+.header_second{
+  width: 100vw;
+  background-color: black;
+  height: 30px;
+  padding: 0 0 0 40px;
+}
+
+.user_box{
+  
+}
+
+.box_left{
+  font-size: 20px;
+  text-decoration: none;
+  color: pink;
+}
+
+.box_right{
+  font-size: 20px;
+  text-decoration: none;
+  padding: 0 0 0 40px;
+  color: pink;
 }
