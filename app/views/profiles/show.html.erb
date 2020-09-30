@@ -1,11 +1,9 @@
+aaa
 <%= render 'shared/header' %>
 
-<%# if @favorite %>
 <%= link_to "自己紹介編集ページへ", edit_profile_path(@favorite.id), class:"new_profile" %>
-<%# end %>
 
 <h1 class="profile_h1">自己紹介</h1>
-
 
 <div class="display">紹介文</div>
 <div class="index_profile">
@@ -77,4 +75,3 @@
     <th class="table_left">3位</th><th class="table_right"><%= @favorite.director_3 %></th>
   </tr>
 </table>
-

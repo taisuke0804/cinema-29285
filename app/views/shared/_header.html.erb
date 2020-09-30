@@ -1,16 +1,13 @@
 <header class="top_header">
   <div class="header">
-
     <div class="page_title">
       <div class="logo_title">
         <%= link_to "cinema review", root_path, class:"aaa" %>
       </div>
     </div>
-
     <div class="new_review">
       <%= link_to "レビュー投稿", new_cinema_path, class:"review_logo" %>
     </div>
-
     <div class="profile_review">
       <% if user_signed_in? %>
         <%= link_to "自己紹介ページ", profiles_path, class:"review_logo" %>
@@ -19,9 +16,7 @@
         <%= link_to "自己紹介ページ", root_path, class:"review_logo" %>
       <% end %>
     </div>
-  
   </div>
-
   <div class="header_second">
     <% if user_signed_in? %>
       <ul class="user_box">

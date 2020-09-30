@@ -28,9 +28,13 @@
 }
 
 .list_title{
-  font-size: 25px;
   margin: 0 0 0 10px;
+}
+
+.title_center{
+  font-size: 25px;
   color: aqua;
+  margin: auto 0;
 }
 
 .list2{

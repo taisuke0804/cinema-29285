@@ -5,5 +5,7 @@ class UsersController < ApplicationController
     # unless @favorite
     #   redirect_to root_path
     # end
+
+    @cinemas = @user.cinemas.order("created_at DESC")
   end
 end

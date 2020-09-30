@@ -6,11 +6,9 @@ class ProfilesController < ApplicationController
     unless @favorite
       redirect_to new_profile_path
     end
-    # @user = User.find(params[:id])
-    # @favorite = @user.favorite
-    # unless @favorite
-    #   redirect_to new_profile_path
-    # end
+    
+    user = User.find(current_user.id)
+    @cinemas = user.cinemas.order("created_at DESC")
   end
 
   def new
@@ -32,6 +30,9 @@ class ProfilesController < ApplicationController
     unless @favorite
       redirect_to new_profile_path
     end
+
+    # @user = Cinema.find(params[:id])
+    # @cinemas = @user.cinemas.order("created_at DESC")
   end
 
   def edit
