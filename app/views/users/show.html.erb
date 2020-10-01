@@ -1,7 +1,7 @@
 <%= render 'shared/header' %>
 
 <% if @favorite%>
-  <% if user_signed_in? %>
+  <% if user_signed_in? && @favorite.user_id == current_user.id %>
     <%= link_to "自己紹介編集ページへ", edit_profile_path(@favorite.id), class:"new_profile" %>
   <% end %>
   

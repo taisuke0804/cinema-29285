@@ -1,5 +1,6 @@
 class CinemasController < ApplicationController
-  before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_index, except: [:index, :show, :search]
+  before_action :search_cinemas, only: :search
 
   def index
     @cinemas = Cinema.all.order("created_at DESC")
@@ -43,6 +44,10 @@ class CinemasController < ApplicationController
     redirect_to root_path
   end
 
+  def search
+    @cinemas = @p.result.order("created_at DESC").includes(:user)
+  end
+
   private
   def cinema_params
     params.require(:cinema).permit(:title, :review, :score, :spoiler_id, :genre_id, :appreciation_id, :watch_time_id).merge(user_id: current_user.id)
@@ -52,6 +57,10 @@ class CinemasController < ApplicationController
     unless user_signed_in? 
       redirect_to action: :index
     end
+  end
+
+  def search_cinemas
+    @p = Cinema.ransack(params[:q])
   end
 
 end

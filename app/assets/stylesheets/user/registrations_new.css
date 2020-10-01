@@ -24,6 +24,12 @@
   height: 35px;
 }
 
+.name_field{
+  height: 35px;
+  width: 300px;
+  font-size: 25px;
+}
+
 .sex_field{
   height: 35px;
   width: 150px;
