@@ -16,6 +16,9 @@
         <%= link_to "自己紹介ページ", root_path, class:"review_logo" %>
       <% end %>
     </div>
+    <div class="search_review">
+      <%= link_to "検索ページ", cinemas_search_path, class:"review_logo" %>
+    </div>
   </div>
   <div class="header_second">
     <% if user_signed_in? %>
@@ -35,7 +38,4 @@
     <% end %>
   </div>
 
-  <div>
-    <%= link_to "検索", cinemas_search_path, class:"search" %>
-  </div>
 </header>

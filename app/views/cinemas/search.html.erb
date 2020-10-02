@@ -1,23 +1,30 @@
 <%= render 'shared/header' %>
 
-<%= search_form_for @p, url: cinemas_search_path do |f| %>
-  <%= f.label :title_cont, '題名' %>
-  <%= f.search_field :title_cont %>
+<h2 class="search_top">検索フォーム</h2>
+
+<%= search_form_for @p, class:"search_form", url: cinemas_search_path do |f| %>
+  <%= f.label :title_cont, '題名 :', class:"search_label" %>
+  <%= f.search_field :title_cont, class:"title_field" %>
   <br>
-  <%= f.label :user_nickname_cont, 'ニックネーム' %>
-  <%= f.search_field :user_nickname_cont %>
+  <%= f.label :user_nickname_cont, 'ニックネーム :', class:"search_label" %>
+  <%= f.search_field :user_nickname_cont, class:"title_field" %>
   <br>
-  <%= f.label :genre_id_eq, 'ジャンル' %>
-  <%= f.collection_select :genre_id_eq, Genre.all, :id, :name, include_blank: '指定なし'%>
+  <%= f.label :genre_id_eq, 'ジャンル :', class:"search_label" %>
+  <%= f.collection_select(:genre_id_eq, Genre.all, :id, :name, {include_blank: '指定なし'}, {class:"genre_field"})%>
   <br>
-  <%= f.label :appreciation_id_eq, '鑑賞方法' %>
-  <%= f.collection_select :appreciation_id_eq, Appreciation.all, :id, :name, include_blank: '指定なし'%>
+  <%= f.label :appreciation_id_eq, '鑑賞方法 :', class:"search_label" %>
+  <%= f.collection_select(:appreciation_id_eq, Appreciation.all, :id, :name, {include_blank: '指定なし'}, {class:"genre_field"})%>
   <br>
-  <%= f.label :watch_time_id_eq, '鑑賞回数' %>
-  <%= f.collection_select :watch_time_id_eq, WatchTime.all, :id, :name, include_blank: '指定なし'%>
+  <%= f.label :watch_time_id_eq, '鑑賞回数 :', class:"search_label" %>
+  <%= f.collection_select(:watch_time_id_eq, WatchTime.all, :id, :name, {include_blank: '指定なし'}, {class:"genre_field"})%>
   <br>
 
-  <%= f.submit '検索' %>
+  <%= f.label :score_gteq, "点数検索 :", class:"search_label" %>
+  <%= f.number_field :score_gteq, class: "score_gteq", min: 0, max: 100 %>
+  <%= f.label :score_lteq, " ~ ", class:"line" %>
+  <%= f.number_field :score_lteq, class: "score_lteq", min: 0, max: 100 %>
+  <br>
+  <%= f.submit '検索', class:"search_submit" %>
 <% end %>
 
 <% @cinemas.each do |cinema| %>

@@ -70,6 +70,15 @@
   justify-content: center;
 }
 
+.search_review{
+  background-color: yellow;
+  margin: 0 0 0 30px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .google-btn{
   height: 300px;
   width: 100%;
@@ -109,8 +118,4 @@
   text-decoration: none;
   padding: 0 0 0 40px;
   color: pink;
-}
-
-.search{
-  color: red;
 }

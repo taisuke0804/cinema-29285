@@ -1,0 +1,51 @@
+.search_top{
+  background-color: pink;
+  text-align: center;
+  margin: 20px 0 0 0;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.search_form{
+  margin: 20px 0 0 0;
+}
+
+.search_label{
+  margin: 0 0 20px 40px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.title_field{
+  margin: 0 0 20px 10px;
+  height: 30px;
+  width: 600px;
+}
+
+.genre_field{
+  margin: 0 0 20px 10px;
+  height: 30px;
+}
+
+.score_gteq{
+  margin: 0 0 0 10px;
+  height: 40px;
+  font-size: 30px;
+}
+
+.line{
+  font-size: 30px;
+}
+
+.score_lteq{
+  height: 40px;
+  font-size: 30px;
+}
+
+.search_submit{
+  margin: 40px 0 20px 40px;
+  height: 50px;
+  width: 100px;
+  background-color: red;
+  font-weight: 900;
+}
