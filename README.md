@@ -1,27 +1,50 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリ名 CINEMA REVIEW 
 
-Things you may want to cover:
+# アプリケーション概要
 
-* Ruby version
+映画のレビュー投稿アプリとなっています。ユーザー登録をすれば作品のレビューを投稿することができ、他のユーザーのレビューも閲覧可能です。また自己紹介ページを作成することでお気に入りの情報を発信することが出来てユーザー同士の交流へと繋がります。
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+# URL 
 
-* Database initialization
+https://cinema-29285.herokuapp.com/
 
-* How to run the test suite
+# テスト用アカウント
 
-* Services (job queues, cache servers, search engines, etc.)
+アドレス 5678efgh@yahoo.co.jp
 
-* Deployment instructions
+password 5678efgh
 
-* ...
+# 利用方法
+
+新規登録画面へ移動し必要項目を全て入力してユーザー登録をする。その後、ログアウトした場合はログイン画面に移動し必要項目を入力してログインする。
+ログイン状態であれば「レビュー投稿」をクリックしてレビューを投稿することが可能になる。また自己紹介ページに移動すれば自分の紹介文やお気に入りの情報を登録することができる。
+ちなみにレビューと自己紹介ページの閲覧自体は未ログイン状態でも可能である
+
+# 目指した課題解決
+
+自分が観た映画の感想を発信し、また今後観たいと思う映画の情報を共有したいという人に向けて、その問題を解決するような投稿ツールを作成したかった
+
+# 洗い出した要件
+
+## ユーザー登録機能
+登録に必要な情報を入力することでユーザー新規登録ができる
+
+## レビュー投稿機能
+レビュー投稿画面をクリックし、情報を入力送信すれば投稿できる
+
+## 自己紹介ページ編集機能
+自己紹介ページをクリックし、情報を入力送信すれば自己紹介ページを作成できる
+
+## 検索機能
+検索ページをクリックし、条件を指定すれば該当するレビューが検索できる
+
+# 実装機能の予定
+
+レビューや自己紹介に対するコメント機能は今後実装の可能性あり
 
 # テーブル設計
 
