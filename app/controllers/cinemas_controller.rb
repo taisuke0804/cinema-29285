@@ -22,6 +22,9 @@ class CinemasController < ApplicationController
 
   def show
     @cinema = Cinema.find(params[:id])
+
+    @comment = Comment.new
+    @comments = @cinema.comments.includes(:user)
   end
 
   def edit

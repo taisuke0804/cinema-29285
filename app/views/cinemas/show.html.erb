@@ -57,6 +57,29 @@
   </div>
 <% end %>
 
-<%#= form_with(model: [@cinema, @comment], local: true) do |form| %>
+<div class="comment-box">
+  <% if current_user %>
+    <%= form_with(model: [@cinema, @comment], local: true) do |form| %>
+      <%= form.text_area :content, placeholder: "コメントする", rows: "2", class:"comment_form" %>
+      <br>
+      <%= form.submit "送信", class:"comment_submit" %>
+    <% end %>
+  <% else %>
+    <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+  <% end %>
+</div>
 
-<%# end %>
+<div class="comment-text">
+  <h4 class="comment_top">＜コメント一覧＞</h4>
+  <% if @comments %>
+    <% @comments.each do |comment| %>
+      <p class="comment-btn">
+        <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}", class:"comment_name" %>：</strong>
+        <%= comment.content %>
+        <% if user_signed_in? && current_user.id == comment.user_id %>
+          <%= link_to "(削除する)", "/cinemas/#{comment.cinema_id}/comments/#{comment.id}", method: :delete, class:"comment_delete" %>
+        <% end %>
+      </p>
+    <% end %>
+  <% end %>
+</div>
