@@ -20,7 +20,8 @@
   width: 40vw;
   height: 80px;
   border: solid 2px blue;
-  padding: 0 5px 0 5px;
+  padding: 2px 5px 2px 5px;
+  font-size: 20px;
 }
 
 .comment_submit{
