@@ -1,6 +1,7 @@
 class Cinema < ApplicationRecord
   belongs_to :user
   has_many :comments
+  has_many :likes, dependent: :destroy
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :genre
@@ -17,5 +18,9 @@ class Cinema < ApplicationRecord
     validates :title, length: { maximum: 40 }
     validates :review, length: { maximum: 2000 }
     validates :score, numericality: {greater_than: 0, less_than: 100}
+  end
+
+  def liked_by?(user)
+    likes.where(user_id: user.id).exists?
   end
 end

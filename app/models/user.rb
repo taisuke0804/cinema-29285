@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :cinemas
   has_one :favorite
   has_many :comments
+  has_many :likes, dependent: :destroy
 
   with_options presence: true do 
     validates :nickname, length: { maximum: 20 }
