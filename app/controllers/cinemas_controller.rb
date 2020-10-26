@@ -26,7 +26,7 @@ class CinemasController < ApplicationController
     @comment = Comment.new
     @comments = @cinema.comments.includes(:user)
 
-    Like.new
+    # Like.new
   end
 
   def edit
