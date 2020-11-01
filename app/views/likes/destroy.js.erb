@@ -1,1 +1,1 @@
-$('#likes_buttons_<%= @cinema.id %>').html("<%= j(render partial: 'likes/like', locals: {cinema: @cinema}) %>");
+$("#like-<%= @cinema.id %>").html("<%= j(render partial: 'likes/like', locals: { cinema: @cinema }) %>");

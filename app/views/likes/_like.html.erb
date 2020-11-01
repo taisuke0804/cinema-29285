@@ -1,11 +1,8 @@
 aaa
 
-<% if user_signed_in? %>
-    <% if cinema.liked_by?(current_user) %>
-        <p><span>お気に入り解除: </span><%=link_to cinema.likes.count, cinema_like_path(cinema_id: cinema.id), method: :delete, remote: true %></p>
-    <% else %>
-        <p><span>お気に入り登録: </span><%=link_to cinema.likes.count, cinema_likes_path(cinema_id: cinema.id), method: :post, remote: true %></p>
-    <% end %>
+<% if Like.find_by(user_id: current_user.id, cinema_id: cinema.id) %>
+  <%= link_to "いいね", cinema_unlike_path(cinema.id), method: :delete, remote: true,  class: "btn btn-default" %>
 <% else %>
-    <p><span>お気に入り数: </span><%= cinema.likes.count %></p>
+  <%= link_to "いいね", cinema_like_path(cinema.id), method: :post, remote: true, class: "btn btn-success" %>
 <% end %>
+<%= cinema.likes.length %>
