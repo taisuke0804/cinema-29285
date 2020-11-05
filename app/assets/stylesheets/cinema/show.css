@@ -58,3 +58,43 @@
 .comment_delete{
   text-decoration: none;
 }
+
+.like_form{
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  margin-left: 40px;
+}
+
+.btn-default{
+  text-decoration: none;
+  border: solid 1px pink;
+  background-color: pink;
+  font-size: 30px;
+  padding: 10px 20px 10px 20px;
+  color: black;
+}
+
+.btn-success{
+  text-decoration: none;
+  border: solid 1px pink;
+  background-color: pink;
+  font-size: 30px;
+  padding: 10px 20px 10px 20px;
+  color: black;
+}
+
+.btn_not_user{
+  text-decoration: none;
+  border: solid 1px pink;
+  background-color: pink;
+  font-size: 30px;
+  padding: 10px 20px 10px 20px;
+  color: black;
+}
+
+.like_num{
+  font-size: 30px;
+  margin: 10px 0 0 20px;
+  font-weight: 800;
+}

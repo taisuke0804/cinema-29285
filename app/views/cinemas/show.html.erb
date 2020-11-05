@@ -50,16 +50,16 @@
   </div>
 </div>
 
-<div id="like-<%= @cinema.id %>" >
-  <%= render partial: "likes/like", locals: {cinema: @cinema} %>
-</div>
-
 <% if user_signed_in? && @cinema.user_id == current_user.id %>
   <div class="edit_destroy">
     <%= link_to "編集", edit_cinema_path(@cinema.id), class:"cinema_edit" %>
     <%= link_to "削除", cinema_path(@cinema.id), method: :delete, class:"cinema_edit" %>
   </div>
 <% end %>
+
+<div id="like-<%= @cinema.id %>" class="like_form" >
+  <%= render partial: "likes/like", locals: {cinema: @cinema} %>
+</div>
 
 <div class="comment-box">
   <% if current_user %>

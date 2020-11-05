@@ -1,8 +1,44 @@
-aaa
-
-<% if Like.find_by(user_id: current_user.id, cinema_id: cinema.id) %>
-  <%= link_to "いいね", cinema_unlike_path(cinema.id), method: :delete, remote: true,  class: "btn btn-default" %>
+<% if user_signed_in? %>
+  <% if Like.find_by(user_id: current_user.id, cinema_id: cinema.id) %>
+    <%= link_to "いいね", cinema_unlike_path(cinema.id), method: :delete, remote: true,  class: "btn-default", id:"like_off" %>
+  <% else %>
+    <%= link_to "いいね", cinema_like_path(cinema.id), method: :post, remote: true, class: "btn-success", id:"like_on" %>
+  <% end %>
 <% else %>
-  <%= link_to "いいね", cinema_like_path(cinema.id), method: :post, remote: true, class: "btn btn-success" %>
+  <div class="btn_not_user" >
+    <%= "いいね" %>
+  </div>
 <% end %>
+
+<div class="like_num">
 <%= cinema.likes.length %>
+</div>
+
+<script>
+$("#like_off").on("mouseover",function(){
+    $("#like_off").css({
+        backgroundColor: "aqua"
+    });
+});
+
+//マウスアウトしたときに元の色に戻る
+$("#like_off").on("mouseout",function(){
+    $("#like_off").css({
+        backgroundColor: ""
+    });
+});
+
+$("#like_on").on("mouseover",function(){
+    $("#like_on").css({
+        backgroundColor: "aqua"
+    });
+});
+
+//マウスアウトしたときに元の色に戻る
+$("#like_on").on("mouseout",function(){
+    $("#like_on").css({
+        backgroundColor: ""
+    });
+});
+
+</script>
